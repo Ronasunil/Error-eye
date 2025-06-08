@@ -16,6 +16,10 @@ app.get("/", (req, res) => {
   throw new Error("Something went wrong");
 });
 
+app.get("/health", (req, res) => {
+  res.status(200).json({ message: "Server is healthy" });
+});
+
 app.use((err, req, res, next) => {
   console.log(err?.message);
   Sentry.captureException(err);
