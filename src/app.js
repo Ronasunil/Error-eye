@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/health", (req, res) => {
-  res.status(200).json({ message: "Server is healthy" });
+  res.status(200).json({ message: "Server is healthy and up" });
 });
 
 app.use((err, req, res, next) => {
